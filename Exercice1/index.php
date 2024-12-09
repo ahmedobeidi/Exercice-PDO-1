@@ -1,6 +1,6 @@
 <?php 
 
-  require_once './utils/read-all-users.php';
+  require_once '../utils/read-all-users.php';
 ?>
 
 <!DOCTYPE html>

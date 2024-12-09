@@ -1,7 +1,7 @@
 <?php 
 
 //  ./connect-db.php searches at the root for connect-db, either do ./utils/connect-db or just connect.db since it's in the same folder
-require_once './utils/connect-db.php';  
+require_once 'connect-db.php';  
 
 $sql = "SELECT * FROM `clients`";
 
