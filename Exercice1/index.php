@@ -31,8 +31,6 @@
             <P><?= $user['cardNumber'] ?></P>
         </div>
         <br><br>  
-        <?php            
-        }
-    ?>
+    <?php }?>
 </body>
 </html>
