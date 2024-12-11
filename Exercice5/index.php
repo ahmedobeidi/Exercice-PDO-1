@@ -12,12 +12,14 @@
     <title>Exercice 5</title>
 </head>
 <body>
+    <h1>Clients dont le nom commence par la lettre "M" par ordre alphabétique</h1>
+
     <?php foreach($users as $user) { ?>
         <div>
-            <P>Nom: <?= $user['lastName'] ?> </P>
-            <P>Prénom: <?= $user['firstName'] ?> </P>
+            <P><span style="font-weight: bold;">Prénom : </span> <?= $user['firstName'] ?></P>
+            <P><span style="font-weight: bold;">Nom : </span> <?= $user['lastName'] ?></P>
         </div>
-        <br><br>  
+        <hr>  
     <?php }?>
 </body>
 </html>
