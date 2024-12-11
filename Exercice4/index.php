@@ -11,7 +11,6 @@
 </head>
 <body>
     <?php 
-
         var_dump($users);
     ?>
 </body>

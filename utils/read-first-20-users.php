@@ -2,7 +2,7 @@
 
 require_once 'connect-db.php';
 
-$sql = "SELECT * FROM `clients` ORDER BY id ASC LIMIT 10";
+$sql = "SELECT * FROM `clients` ORDER BY id ASC LIMIT 20";
 
 try {
     $stmt = $pdo->query($sql);

@@ -9,28 +9,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ecercice 1</title>
-    <style>
-        div {
-            color: white; 
-            width: 150px;
-            display: flex;
-            flex-direction: column;
-            background-color: brown;
-            text-align: center;
-        }
-    </style>
 </head>
 <body>
-     
-    <?php foreach($users as $user) { ?>
-        <div>
-            <P><?= $user['lastName'] ?></P>
-            <P><?= $user['firstName'] ?></P>
-            <P><?= $user['birthDate'] ?></P>
-            <P><?= $user['card'] ?></P>
-            <P><?= $user['cardNumber'] ?></P>
-        </div>
-        <br><br>  
-    <?php }?>
+    <h1>Tous les clients</h1>
+
+    <ul>
+        <?php foreach($clients as $client) { ?>
+            <li>Prénom : <?= $client['firstName'] ?> | Nom : <?= $client['lastName'] ?></li>
+        <?php }?>
+    </ul>
+    
 </body>
 </html>
