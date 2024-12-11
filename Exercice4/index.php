@@ -10,8 +10,12 @@
     <title>Exercice 4</title>
 </head>
 <body>
-    <?php 
-        var_dump($users);
-    ?>
+    <h1>Les clients qui ont une carte de fidélité</h1>
+
+    <ul>
+        <?php foreach($clients as $client) { ?>
+            <li>Prénom : <?= $client['firstName']; ?> | Nom : <?= $client['lastName']; ?> | Date de naissance : <?= $client['birthDate']; ?> | Numéro de carte : <?= $client['cardNumber']; ?> | Type de carte : <?= $client['type']; ?></li>
+        <?php } ?>
+    </ul>
 </body>
 </html>
