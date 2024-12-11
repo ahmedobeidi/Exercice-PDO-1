@@ -11,20 +11,12 @@
     <title>Exercice 2</title>
 </head>
 <body>
-    <?php foreach($shows as $show) { ?>
-        <div>
-            <P><?= $show['title'] ?></P>
-            <P><?= $show['performer'] ?></P>
-            <P><?= $show['date'] ?></P>
-            <P><?= $show['showTypesId'] ?></P>
-            <P><?= $show['firstGenresId'] ?></P>
-            <P><?= $show['secondGenreId'] ?></P>
-            <P><?= $show['duration'] ?></P>
-            <P><?= $show['startTime'] ?></P>
-        </div>
-        <br><br>  
-        <?php            
-        }
-    ?>
+    <h1>Tous les types de spectacles possibles</h1>
+
+    <ul> 
+        <?php foreach($showsTypes as $showType) { ?>
+            <li><?= $showType['type']; ?></li>
+        <?php } ?>
+    </ul>
 </body>
 </html>
