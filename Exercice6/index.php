@@ -10,8 +10,12 @@
     <title>Exercice 6</title>
 </head>
 <body>
-    <?php foreach($shows as $show) { ?>
-        <p> <?= $show['title']; ?> </p>
-    <?php } ?>
+    <h1>Titre de tous les spectacles par ordre alphabétique ainsi que l'artiste, la date et l'heure.</h1>
+
+    <ul>
+        <?php foreach($shows as $show) { ?>
+            <li><?= $show['title']; ?> par <?= $show['performer']; ?>, Le <?= $show['date']; ?> à <?= $show['startTime'] ?></li>
+        <?php } ?>
+    </ul>
 </body>
 </html>
