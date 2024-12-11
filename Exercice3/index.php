@@ -1,5 +1,4 @@
 <?php 
-
     require_once '../utils/read-first-20-users.php';
 ?>
 
@@ -11,8 +10,13 @@
     <title>Exercice 3</title>
 </head>
 <body>
-    <?php 
-        var_dump($users);
-    ?>
+    <h1>Les 20 premiers clients</h1>
+
+    <ul>
+        <?php foreach($clients as $client) { ?>
+            <li>Prénom : <?= $client['firstName']; ?> | Nom : <?= $client['lastName']; ?></li>
+        <?php } ?>
+    </ul>
+
 </body>
 </html>
