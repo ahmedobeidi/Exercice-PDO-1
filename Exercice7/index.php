@@ -10,15 +10,37 @@
     <title>Exercice 7</title>
 </head>
 <body>
-    <?php foreach($users as $user) { ?>
-        <div>
-            <p> <?= $user['lastName']; ?> </p>
-            <p> <?= $user['firstName']; ?> </p>
-            <p> <?= $user['birthDate']; ?> </p>
-            <p> <?php if ($user['card'] === 1) echo "Oui"; else echo "Non" ?> </p>
-            <?php if (!is_null($user['cardNumber'])) echo $user['cardNumber']; ?>
-        </div>
-        <br><br>
+    <h1>Afficher tous les clients sous un format particulier</h1>
+
+    <?php
+    foreach ($clients as $client) {
+    ?>
+        <hr>
+        <!-- EXEMPLE -->
+        <article>
+            <p><span style="font-weight:bold;">Nom :</span> <?= $client['lastName'] ?></p>
+
+            <p><span style="font-weight:bold;">Prénom :</span> <?= $client['firstName'] ?></p>
+
+            <p><span style="font-weight:bold;">Date de naissance :</span> <?= $client['birthDate'] ?></p>
+
+            <p>
+                <span style="font-weight:bold;">Carte de fidélité :</span> 
+                <?php echo $client['type'] === 'Fidélité' ? 'Oui' : 'Non'; ?> 
+            </p>
+
+
+            <?php
+                if ($client['type'] === 'Fidélité') {
+                    echo "<p><span style='font-weight:bold;'>Numéro de carte :</span> {$client['cardNumber']}</p>";
+                }
+            ?>
+            
+        </article>
+
+        <hr>
+
     <?php } ?>
+
 </body>
 </html>
